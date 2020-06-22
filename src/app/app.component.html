@@ -20,6 +20,15 @@
 </ul>
 
 <h1>A specific post:</h1>
-
-<h3>{{ (post | async)?.title }}</h3>
-<p>{{ (post | async)?.content }}</p>
+<input
+  type="text"
+  [(ngModel)]="postTitle"
+  name="postTitle"
+  placeholder="{{ (post | async)?.title }}"
+/>
+<textarea
+  [(ngModel)]="postContent"
+  name="postContent"
+  placeholder="{{ (post | async)?.content }}"
+></textarea>
+<input type="submit" value="Update Post" (click)="updatePost()" />
