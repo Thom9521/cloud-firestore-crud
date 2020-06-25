@@ -11,7 +11,7 @@ interface Post {
   title: string;
   content: string;
 }
-
+//
 @Component({
   selector: "app-root",
   templateUrl: "./app.component.html",
